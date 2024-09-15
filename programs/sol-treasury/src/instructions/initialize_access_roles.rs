@@ -8,7 +8,7 @@ pub struct InitializeAccessRoles<'info> {
     #[account(
         init,
         payer = payer,
-        seeds =[b"access_roles_account".as_ref()],
+        seeds = [crate::constants::ACCESS_ROLES_SEED],
         bump,
         space = 8 + size_of::<AccessRoles>(),
     )]

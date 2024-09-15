@@ -8,7 +8,7 @@ pub struct InitializeAttackCounter<'info> {
     #[account(
         init,
         payer = payer,
-        seeds =[b"attack_counter_account".as_ref()],
+        seeds = [crate::constants::ATTACK_COUNTER_SEED],
         bump,
         space = 8 + size_of::<AttackCounter>(),
     )]

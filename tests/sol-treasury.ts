@@ -10,7 +10,7 @@ describe("sol-treasury", () => {
 
   it("Is initialized!", async () => {
     // Add your test here.
-    const tx = await program.methods.initialize().rpc();
+    const tx = await program.methods.initializeAttackCounter().rpc();
     console.log("Your transaction signature", tx);
   });
 });

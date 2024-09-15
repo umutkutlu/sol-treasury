@@ -6,12 +6,12 @@ use crate::state::AccessRoles;
 pub struct SetAccessRoles<'info> {
     #[account(
         mut,
-        seeds =[b"access_roles_account".as_ref()],
+        seeds = [crate::constants::ACCESS_ROLES_SEED],
         bump,
         constraint = access_roles_account.owner == authority.key()
     )]
     access_roles_account: Account<'info, AccessRoles>,
-    
+
     authority: Signer<'info>,
 }
 

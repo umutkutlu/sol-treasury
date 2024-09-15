@@ -8,7 +8,7 @@ pub struct InitializePendingAttacks<'info> {
     #[account(
         init,
         payer = payer,
-        seeds =[b"pending_attacks_account".as_ref()],
+        seeds = [crate::constants::PENDING_ATTACKS_SEED],
         bump,
         space = 8 + size_of::<PendingAttacks>(),
     )]
